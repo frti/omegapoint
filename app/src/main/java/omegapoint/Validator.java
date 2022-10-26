@@ -5,7 +5,7 @@ import java.util.List;
 
 class Validator {
     private final List<ValidityCheck> validityChecks = List.of(new LuhnCheck());
-    List<String> validate(final String maybePno) {
-        return new LinkedList<>();
+    ValidateResponse validate(final String maybePno) {
+        return new ValidateResponse(new LinkedList<String>());
     }
 }
