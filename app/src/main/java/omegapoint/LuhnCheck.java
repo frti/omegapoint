@@ -22,7 +22,7 @@ public class LuhnCheck implements ValidityCheck {
             multiplier = 3 - multiplier;
         }
 
-        String computedChecksum = (sum % 10 == 0) ? "" : "" + (sum - (sum % 10) + 10 - sum);
+        String computedChecksum = (sum % 10 == 0) ? "0" : "" + (sum - (sum % 10) + 10 - sum);
         System.out.println("Computed checksum is " + computedChecksum);
         return (computedChecksum.equals(actualChecksum) ?
                 Optional.empty() :

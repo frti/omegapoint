@@ -17,6 +17,13 @@ class LuhnCheckTest {
     }
 
     @Test
+    void validChecksum2() {
+        LuhnCheck luhn = new LuhnCheck();
+        Optional<String> r = luhn.apply("141206-2380");
+        assertTrue(r.isEmpty());
+    }
+
+    @Test
     void invalidChecksum() {
         LuhnCheck luhn = new LuhnCheck();
         Optional<String> r = luhn.apply("811218-9879");

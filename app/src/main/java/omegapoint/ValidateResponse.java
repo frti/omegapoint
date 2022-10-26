@@ -9,4 +9,12 @@ public class ValidateResponse {
 
     final List<String> errors;
     public boolean isValid() { return errors.isEmpty(); }
+
+    @Override
+    public String toString() {
+        return "ValidateResponse{" +
+                "valid=" + isValid() +
+                ",errors=" + errors +
+                '}';
+    }
 }
