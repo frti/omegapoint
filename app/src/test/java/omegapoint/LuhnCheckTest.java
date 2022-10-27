@@ -43,4 +43,11 @@ class LuhnCheckTest {
         Optional<String> r = luhn.apply("201701272394");
         assertFalse(r.isEmpty());
     }
+
+    @Test
+    void validChecksumInvalidPno() {
+        LuhnCheck luhn = new LuhnCheck();
+        Optional<String> r = luhn.apply("190302299813");
+        assertTrue(r.isEmpty());
+    }
 }
